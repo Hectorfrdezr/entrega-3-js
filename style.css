@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background:linear-gradient(#212121,#8888); */
+    background-image: url(./img/fonndo\ pag);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+h1{
+    color: aliceblue;
+    margin-bottom: 25px;
+    font-size: 54px;
+}
+
+#searchButton {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 12px 0 20px 0;
+
+  }
+  
+  #searchButton:hover {
+    background-color: #45a049;
+  }
+  #searchInput{
+    display: flex;
+    gap: 10px;
+    border-radius: 25px;
+    height: 35px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;  
+}
+#pizzaContainer {
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    text-align: center; 
+}
+
+#pizzaContainer img{
+    width: 65%;
+    border-radius: 80px;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+    display: none; 
+  }
+  
+  .overlay.active {
+    display: block; 
+  }
