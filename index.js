@@ -76,5 +76,19 @@ function searchPizza() {
     // Mostrar un mensaje de error si la pizza no se encontró
     pizzaContainer.innerHTML = "<h2>No se encontró ninguna pizza con ese número.</h2>"
   }
-}})
+}
+const lastFoundPizza = JSON.parse(localStorage.getItem("lastFoundPizza"));
+  if(lastFoundPizza){
+  const pizzaContainer = document.getElementById("pizzaContainer");
+  const pizzaCard = `
+      <div>
+        <h1>${lastFoundPizza.nombre}</h1>
+        <img src="${lastFoundPizza.imagen}" alt="${lastFoundPizza.nombre}">
+        <p>Ingredientes: ${lastFoundPizza.ingredientes.join(", ")}</p>
+        <h2>Precio: $${lastFoundPizza.precio}</h2>
+      </div>
+    `;
+    pizzaContainer.innerHTML = pizzaCard;
+}
+});
 
